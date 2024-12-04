@@ -9,4 +9,12 @@ with open(
     test_input_lines = f.read().split("\n")
 
 
+class Test(unittest.TestCase):
+    def test_part1(self):
+        self.assertEqual(0, lib.part1(test_input_lines))
+
+    def test_part2(self):
+        self.assertEqual(0, lib.part2(test_input_lines))
+
+
 tc = unittest.TestCase()
