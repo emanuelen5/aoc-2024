@@ -39,11 +39,15 @@ if which code; then
     code "$dir/data/input.txt" "$dir/data/test_input.txt"
 fi
 
+function trim_trailing_newlines() {
+    awk '/./ { last = $0; print last } END { if (length(last)) print last }'
+}
+
 echo "Paste test content (Ctrl+D to finish):"
-cat >"$dir/data/test_input.txt"
+cat | trim_trailing_newlines >"$dir/data/test_input.txt"
 
 echo "Paste real content (Ctrl+D to finish):"
-cat >"$dir/data/input.txt"
+cat | trim_trailing_newlines >"$dir/data/input.txt"
 
 git add "$dir"
 git commit -m "Create $dir from template"
