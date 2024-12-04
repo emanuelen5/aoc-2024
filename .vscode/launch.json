@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: day",
-            "type": "python",
-            "request": "launch",
-            "module": "day10",
-            "justMyCode": true
+          "name": "Python: day",
+          "type": "python",
+          "request": "launch",
+          "module": "day1",
+          "justMyCode": true
         },
         {
             "name": "Python: unittest",
