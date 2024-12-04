@@ -33,6 +33,7 @@ if [ -d "$dir" ] && ! $force; then
     exit 1
 elif ! [ -d "$dir" ]; then
     cp -r template/ "$dir"
+    mv "$dir/test.py" "$dir/test_day$day.py"
 fi
 
 if which code; then
