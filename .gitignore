@@ -1,0 +1,5 @@
+day*/target/
+template-*/target/
+__pycache__
+venv
+.envrc
