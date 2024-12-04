@@ -47,8 +47,13 @@ function trim_trailing_newlines() {
 echo "Paste test content (Ctrl+D to finish):"
 cat | trim_trailing_newlines >"$dir/data/test_input.txt"
 
-echo "Paste real content (Ctrl+D to finish):"
-cat | trim_trailing_newlines >"$dir/data/input.txt"
+year=2024
+if which aocd; then
+    aocd "$year" "$day" >"$dir/data/input.txt"
+else
+    echo "Paste real content (Ctrl+D to finish):"
+    cat | trim_trailing_newlines >"$dir/data/input.txt"
+fi
 
 git add "$dir"
 git commit -m "Create $dir from template"
