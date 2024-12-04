@@ -9,4 +9,9 @@ with open(
     test_input_lines = f.read().split("\n")
 
 
+class Test(unittest.TestCase):
+    def test_part1(self):
+        self.assertEqual(11, lib.part1(test_input_lines))
+
+
 tc = unittest.TestCase()

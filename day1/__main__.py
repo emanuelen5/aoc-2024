@@ -5,8 +5,8 @@ from . import lib
 with open(Path(__file__).parent.joinpath("data/input.txt"), "r", encoding="utf-8") as f:
     lines = f.read().split("\n")
 
-part1 = None
-part2 = None
-
+part1 = lib.part1(lines)
 print(f"Part 1: {part1}")
+
+part2 = None
 print(f"Part 2: {part2}")
